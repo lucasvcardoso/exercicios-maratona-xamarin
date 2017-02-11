@@ -1,11 +1,11 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using DemoPortable.Droid.Implementations;
 
 namespace DemoPortable.Droid
 {
@@ -26,6 +26,9 @@ namespace DemoPortable.Droid
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			
 			button.Click += delegate {
+                Printer printer = new Printer();
+                PrinterManager printerManager = new PrinterManager(printer);
+                printerManager.ShowMessage();
 				button.Text = string.Format ("{0} clicks!", count++);
 			};
 		}

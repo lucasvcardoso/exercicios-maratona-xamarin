@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DemoPortable.WinPhone.Implementations;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -47,6 +48,9 @@ namespace DemoPortable.WinPhone
             // this event is handled for you.
             Button.Click += delegate
             {
+                Printer printer = new Printer();
+                PrinterManager printerManager = new PrinterManager(printer);
+                printerManager.ShowMessage();
                 var title = string.Format("{0} clicks!", count++);
                 Button.Content = title;
             };
