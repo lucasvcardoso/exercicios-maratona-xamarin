@@ -16,7 +16,10 @@ EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		HelloXamarinFormsShared\HelloXamarinFormsShared\HelloXamarinFormsShared.projitems*{1a80db5b-0b59-44ad-839f-752ed139b5e2}*SharedItemsImports = 13
+		HelloXamarinFormsShared\HelloXamarinFormsShared\HelloXamarinFormsShared.projitems*{23401bf7-cd07-4532-b3c4-2ca27a4598e9}*SharedItemsImports = 4
 		HelloXamarinFormsShared\HelloXamarinFormsShared\HelloXamarinFormsShared.projitems*{dd1861e4-a57b-4258-9dc5-5e6a57d9659f}*SharedItemsImports = 4
+		HelloXamarinFormsShared\HelloXamarinFormsShared\HelloXamarinFormsShared.projitems*{e29e68b3-0ccd-4eac-b4ec-4896ba883897}*SharedItemsImports = 4
+		HelloXamarinFormsShared\HelloXamarinFormsShared\HelloXamarinFormsShared.projitems*{ed2171f3-ef41-4026-a351-776fa035a667}*SharedItemsImports = 4
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
