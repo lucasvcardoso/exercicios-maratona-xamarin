@@ -6,6 +6,8 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using DemoPortable.Droid.Implementations;
+using Microsoft.Azure.Mobile.Analytics;
+using System.Collections.Generic;
 
 namespace DemoPortable.Droid
 {
@@ -26,6 +28,7 @@ namespace DemoPortable.Droid
 			Button button = FindViewById<Button> (Resource.Id.myButton);
 			
 			button.Click += delegate {
+                Analytics.TrackEvent("Button clicked", new Dictionary<string, string> { { "Category", "Button Clicked" }, { "ButtonName", "Converter" } });
                 Printer printer = new Printer();
                 PrinterManager printerManager = new PrinterManager(printer);
                 printerManager.ShowMessage();

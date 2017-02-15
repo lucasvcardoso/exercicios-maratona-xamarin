@@ -1,4 +1,5 @@
 ﻿using DemoPortable.WinPhone.Implementations;
+using Microsoft.Azure.Mobile.Analytics;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -48,6 +49,7 @@ namespace DemoPortable.WinPhone
             // this event is handled for you.
             Button.Click += delegate
             {
+                Analytics.TrackEvent("Button clicked", new Dictionary<string, string> { { "Category", "Button Clicked" }, { "ButtonName", "Converter" } });
                 Printer printer = new Printer();
                 PrinterManager printerManager = new PrinterManager(printer);
                 printerManager.ShowMessage();

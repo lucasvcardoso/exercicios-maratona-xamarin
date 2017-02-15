@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -43,6 +46,7 @@ namespace HelloXamarinFormsShared.Windows
         /// <param name="e">Details about the launch request and process.</param>
         protected override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            MobileCenter.Start(typeof(Analytics), typeof(Crashes));
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {

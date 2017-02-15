@@ -3,6 +3,9 @@ using Android.Widget;
 using Android.OS;
 using System;
 using Android.Content;
+using Microsoft.Azure.Mobile;
+using Microsoft.Azure.Mobile.Analytics;
+using Microsoft.Azure.Mobile.Crashes;
 
 namespace DemoActivities
 {
@@ -12,7 +15,7 @@ namespace DemoActivities
         
         protected override void OnCreate(Bundle savedInstanceState)
         {
-
+            MobileCenter.Start("2052f06d-8d46-4c68-93f8-b27b23b40946", typeof(Analytics), typeof(Crashes));
             base.OnCreate(savedInstanceState);
             // Set our view from the "main" layout resource
             SetContentView(Resource.Layout.Main);
