@@ -9,6 +9,8 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using System.IO;
+using SQLite;
 
 namespace DemoActivities
 {
@@ -34,6 +36,18 @@ namespace DemoActivities
                 txtCapitalColombia.Text = Intent.GetDoubleExtra("capitalColombia", defaultValue).ToString();
                 imgBrasil.SetImageResource(Resource.Drawable.brasil);
                 imgColombia.SetImageResource(Resource.Drawable.colombia);
+                var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                path = Path.Combine(path, "Base.db3");
+                var conn = new SQLiteConnection(path);
+                var elements = from s in conn.Table<Information>()
+                               select s;
+                foreach(var row in elements)
+                {
+                    Toast.MakeText(this, row.ReceitasBrasil.ToString(), ToastLength.Short).Show();
+                    Toast.MakeText(this, row.DespesasBrasil.ToString(), ToastLength.Short).Show();
+                    Toast.MakeText(this, row.ReceitasColombia.ToString(), ToastLength.Short).Show();
+                    Toast.MakeText(this, row.DespesasColombia.ToString(), ToastLength.Short).Show();
+                }
             }
             catch (Exception ex)
             {
