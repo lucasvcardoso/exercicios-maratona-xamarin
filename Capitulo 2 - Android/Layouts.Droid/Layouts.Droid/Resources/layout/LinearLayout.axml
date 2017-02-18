@@ -33,8 +33,23 @@
     android:layout_height="fill_parent"
     android:layout_weight="1"
     >
-    <TextView
-      android:text="Olá 1"
-      />
+  <TextView
+    android:text="Olá 1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+  />
+  <TextView
+    android:text="Olá 2"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+  />
+  <Button
+    android:text="Click"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+  />
   </LinearLayout>
 </LinearLayout>
