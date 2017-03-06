@@ -20,7 +20,7 @@ namespace DemoViewLabelPCL.Windows
         public MainPage()
         {
             this.InitializeComponent();
-            MobileCenter.Configure("2052f06d-8d46-4c68-93f8-b27b23b40946");
+            //MobileCenter.Configure("2052f06d-8d46-4c68-93f8-b27b23b40946");
             LoadApplication(new DemoViewLabelPCL.App());
         }
     }
